@@ -1,15 +1,11 @@
 {
   "extends": [
-    "tslint:recommended",
-    "tslint-config-prettier",
-    "tslint-plugin-prettier",
-    "tslint-etc"
+    "tslint:recommended"
   ],
   "rulesDirectory": [
     "codelyzer"
   ],
   "rules": {
-    "prettier": true,
     "align": {
       "options": [
         "parameters",

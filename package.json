@@ -6,11 +6,10 @@
     "start": "ng serve --port 5000",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e",
-    "style:fix": "import-sort --write \"**/{src,tests,e2e}/*.ts\" && prettier --write \"**/{src,tests,e2e}/*.{*css,ts}\" && js-beautify \"src/**/*.html\"",
-    "style": "import-sort -l \"**/{src,tests,e2e}/*.ts\" && prettier --check \"**/{src,tests,e2e}/*.{*css,ts}\""
-  },
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix"
+   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.2.0",
