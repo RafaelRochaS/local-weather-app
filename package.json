@@ -9,7 +9,9 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "lint": "ng lint",
-    "lint:fix": "ng lint --fix"
+    "lint:fix": "ng lint --fix",
+    "prenow:publish": "npm run build:prod",
+    "now:publish": "now --platform-version 2 --prod dist/local-weather-app"
   },
   "private": true,
   "dependencies": {

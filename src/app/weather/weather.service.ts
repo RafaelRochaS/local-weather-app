@@ -53,7 +53,7 @@ export class WeatherService implements IWeatherService {
       temperature: this.convertKelvinToFahrenheit(data.main.temp),
       description: data.weather[0].description
 
-    }
+    };
   }
 
   private convertKelvinToFahrenheit(kelvin: number): number {

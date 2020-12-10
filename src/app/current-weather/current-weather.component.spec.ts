@@ -52,5 +52,5 @@ describe('CurrentWeatherComponent', () => {
     const titleEl: HTMLElement = debugEl.query(By.css('span'))
       .nativeElement;
     expect(titleEl.textContent).toContain('Bethesda');
-  })
+  });
 });
