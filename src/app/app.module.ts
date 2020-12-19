@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, CurrentWeatherComponent],
@@ -15,7 +16,9 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
