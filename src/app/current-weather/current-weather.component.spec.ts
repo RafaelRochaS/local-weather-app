@@ -6,6 +6,7 @@ import { injectSpy } from 'angular-unit-test-helper';
 import { of } from 'rxjs';
 import { fakeWeather } from '../weather/weather.service.fake';
 import { By } from '@angular/platform-browser';
+import { MaterialModule } from '../material.module';
 
 describe('CurrentWeatherComponent', () => {
   let component: CurrentWeatherComponent;
@@ -19,7 +20,8 @@ describe('CurrentWeatherComponent', () => {
       declarations: [ CurrentWeatherComponent ],
       providers: [{
         provide: WeatherService, useValue: weatherServiceSpy,
-      }]
+      }],
+      imports: [ MaterialModule ]
     })
     .compileComponents();
     weatherServiceMock = injectSpy(WeatherService);
@@ -49,8 +51,8 @@ describe('CurrentWeatherComponent', () => {
     expect(component.current.city).toEqual('Bethesda');
     expect(component.current.temperature).toEqual(280.32);
     const debugEl = fixture.debugElement;
-    const titleEl: HTMLElement = debugEl.query(By.css('span'))
+    const titleEl: HTMLElement = debugEl.query(By.css('.mat-title'))
       .nativeElement;
     expect(titleEl.textContent).toContain('Bethesda');
-  })
+  });
 });
